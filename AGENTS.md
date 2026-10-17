@@ -32,4 +32,5 @@
 - Bitwig Controller extensions can follow the selected Arranger clip with `createArrangerCursorClip(...)` and inspect notes through the finite step grid (`NoteStep`), but the API does not expose a way to register an extension-defined command in Bitwig's keyboard-shortcut list.
 - The Controller API does not expose an Arranger clip's absolute timeline position through `Clip`/`CursorClip`; do not claim that absolute-position transfer is available without a separate, verified source for that position.
 - Synthesizer V Studio 2's script runtime is ECMAScript 5.1. Keep delivered Synthesizer V scripts ES5-compatible.
+- Synthesizer V scripts can read selected piano-roll notes with `SV.getMainEditor().getSelection().getSelectedNotes()`, read lyrics with `Note.getLyrics()`, and write text to the OS clipboard with `SV.setHostClipboard(...)`.
 - Run the repository's automated checks with `python3 -m unittest discover -s tests -v`; use JXA only as a local syntax parser for JavaScript because host API behavior still requires manual testing in Bitwig and Synthesizer V.

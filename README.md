@@ -33,14 +33,30 @@ Bitwigを再起動し、Settings > Controllersで
 
 ### 2. Synthesizer Vスクリプト
 
-`synthv/PasteBitwigMidi.js`を次へコピーします。
+次の2ファイルをコピーします。
+
+- `synthv/PasteBitwigMidi.js`
+- `synthv/CopySelectedLyrics.js`
 
 ```text
 ~/Library/Application Support/Dreamtonics/Synthesizer V Studio 2/scripts/
 ```
 
 Synthesizer Vのスクリプトメニューを再読み込みし、任意のショートカットを
-「Bitwig MIDIを貼り付け」に割り当てます。
+「Bitwig MIDIを貼り付け」と「選択ノートの歌詞をコピー」に割り当てます。
+
+### 選択ノートの歌詞をコピー
+
+Synthesizer Vのピアノロールでノートを選択し、スクリプト一覧から
+「選択ノートの歌詞をコピー」を実行します。選択ノートは開始位置順に並べられ、
+各ノートの歌詞が半角スペース区切りでOSクリップボードへコピーされます。
+
+```text
+きょ う は いい てん き
+```
+
+同じ開始位置に複数のノートがある場合は、選択された順序を維持します。
+ノートが選択されていない場合は何もコピーせず、メッセージを表示します。
 
 ### 3. Bitwig側コピーのショートカット
 
